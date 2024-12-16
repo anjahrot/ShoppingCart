@@ -1,7 +1,8 @@
 import { Link , useMatch, useResolvedPath } from 'react-router-dom'
 import './navbar.css'
 
-const Navbar = () => {
+const Navbar =  () => {
+   
     return (
         <nav className='nav'>
             <Link to="/" className='site-title'>
