@@ -1,26 +1,66 @@
 .productGrid {
+    padding: 30px;
     display: grid;
     grid-template-columns: repeat(3, minmax(100px, 1fr));
     grid-template-rows: repeat(2, minmax(300px, 1fr));
     justify-items: stretch;
     align-items: stretch;
-    gap: 22px;
+    gap: 40px;
 }
 
 .card {
+    padding: 30px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    border: 1px solid #333;
     border-radius: 10px;
-    transform-style: preserve-3d;
-    transition: transform 0.6s, box-shadow 0.6s;
-    cursor: pointer;
+}
+
+.imageAndInfo {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.productImg {
+    align-self: center;
+    max-height: 16rem;
+    width: auto;
+}
+
+.showMoreBtn {
+    height: fit-content;
+    cursor: pointer; 
+}
+
+.titleAndPrice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.price {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.addProduct {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.inputField {
+    width: 50px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
 }
 
 img {
-    height: 12rem;
+    max-height: 2.5rem;
     width: auto;
 }
 
