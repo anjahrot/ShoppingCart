@@ -28,12 +28,19 @@ const App = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error was encountered</p>
   
+  function updateCart () {
+    let items = 0;
+    for(let i=0;i<cartItems.length;i++) {
+      items += cartItems[i].quantity;
+    }
+    return items;
+  }
 
   return (
     <>
-      <Navbar />
+      <Navbar updateCart={updateCart}/>
       <div className='container'>
-        <Outlet context = {[items, setItems]}/>
+        <Outlet context = {[items, cartItems, setCartItems, updateCart]}/>
       </div>
     </>
     

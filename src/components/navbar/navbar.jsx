@@ -1,7 +1,11 @@
 import { Link , useMatch, useResolvedPath } from 'react-router-dom'
 import './navbar.css'
+import shoppingCartImg from '../../assets/shopping-cart.png'
 
-const Navbar =  () => {
+
+const Navbar =  ({updateCart}) => {
+
+    let numberOfItems = updateCart();
    
     return (
         <nav className='nav'>
@@ -10,6 +14,8 @@ const Navbar =  () => {
             </Link>
             <ul>
                 <CustomLink to="/shop">Shop</CustomLink>
+                <img src={shoppingCartImg}></img>
+                <div className='itemsInCart'>{numberOfItems}</div>
                 <CustomLink to="/shoppingCart">Check Out</CustomLink>
             </ul>
         </nav>

@@ -54,13 +54,27 @@
 
 .inputField {
     width: 50px;
+    height: 40px;
     font-size: 1rem;
     text-align: center;
+    border: 1px solid #333;
     border-radius: 5px;
 }
 
+.addToCartBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 40px;
+    background-color: lightgrey;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 img {
-    max-height: 2.5rem;
+    max-height: 2rem;
     width: auto;
 }
 
