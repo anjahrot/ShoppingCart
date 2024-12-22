@@ -14,9 +14,10 @@ const Navbar =  ({updateCart}) => {
             </Link>
             <ul>
                 <CustomLink to="/shop">Shop</CustomLink>
-                <img src={shoppingCartImg}></img>
-                <div className='itemsInCart'>{numberOfItems}</div>
-                <CustomLink to="/shoppingCart">Check Out</CustomLink>
+                <CustomLink to="/shoppingCart">
+                    <img src={shoppingCartImg}></img>
+                    <div className='itemsInCart'>{numberOfItems}</div>
+                </CustomLink>
             </ul>
         </nav>
     )

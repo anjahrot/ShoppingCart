@@ -9,7 +9,7 @@ const Shop = () => {
     function addItemToCart (product, quantity) {
       setCartItems([
         ...cartItems, 
-      { id: product.id, 
+      { id: crypto.randomUUID(), 
         title: product.title,
         price: product.price,
         imgUrl: product.image,
@@ -36,7 +36,7 @@ const Shop = () => {
 
     const [moreInfo, setMoreInfo] = useState(false);
     const [btnText, setBtnText] = useState('Show Product Info');
-    const [inputValue, setInputValue] = useState(0);
+    const [inputValue, setInputValue] = useState(1);
 
     function toggleMoreInfo () {
       if(!moreInfo) {
@@ -57,7 +57,7 @@ const Shop = () => {
         </div>
         <div className='titleAndPrice'>
           <h3 className='title'>{title}</h3>
-          <h2 className='price'>Price: {price}</h2>
+          <h2 className='price'>Price: ${price}</h2>
         </div>
         <form className='addProduct' onSubmit={(e) => {
           e.preventDefault();
@@ -70,7 +70,7 @@ const Shop = () => {
             type='number'
             pattern='^[0-9]'
             step = '1'
-            min = '0'
+            min = '1'
             name='quantity'
             onChange = {(e) => setInputValue(Number(e.target.value))} />
           <button className='addToCartBtn'>

@@ -1,0 +1,40 @@
+.gridContainerTotal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.totalOfProducts {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.totalOfProducts:nth-child(2) {
+    justify-items: center;
+}
+
+
+.totalItem {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    gap: 10px;
+}
+
+.cardSummary {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.summaryImg {
+    max-height: 8rem;
+    width: auto;
+}
+
+.totalLast {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}

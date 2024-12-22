@@ -4,9 +4,9 @@ import './home.css'
 const Home = () => {
 
 return (
-    <div>
+    <div className='homeContainer'>
       <h1>Hello from the home page of the Odin Shop!</h1>
-      <p>We have different products that are worth checking out</p>
+      <p>{"We sell fashionable women's clothing - check out our high end sortiment"}</p>
     
       <button>
           <Link to="shop">Go to shop</Link>

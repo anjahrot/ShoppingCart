@@ -73,7 +73,7 @@
     cursor: pointer;
 }
 
-img {
+.addToCartBtn > img {
     max-height: 2rem;
     width: auto;
 }
